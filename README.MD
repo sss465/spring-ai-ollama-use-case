@@ -1,3 +1,6 @@
 # Spring AI 使用案例
 1. 本项目用于学习基于ollama的Spring AI框架的使用
-2. 所有调用方式都在src/test下
+
+## 实例列表
+> 所有调用方式都在src/test/java/org/example/springaiollama下
+1. 简单对话测试：org.example.springaiollama.SimpleChatTest

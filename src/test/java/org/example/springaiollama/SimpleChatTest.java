@@ -7,13 +7,13 @@ import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * 对话测试
+ * 简单对话测试
  * @author houbw
  * @date 2025/2/20
  */
 @Slf4j
 @SpringBootTest
-class ChatTest {
+class SimpleChatTest {
 
     @Resource
     private OllamaChatModel ollamaChatModel;
