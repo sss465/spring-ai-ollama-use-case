@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>org.example</groupId>
-	<artifactId>spring-ai-ollama</artifactId>
+	<artifactId>spring-ai-ollama-use-case</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-ai-ollama</name>
-	<description>spring-ai-ollama</description>
+	<name>spring-ai-ollama-use-case</name>
+	<description>spring-ai-ollama-use-case</description>
 	<url/>
 
 	<properties>
