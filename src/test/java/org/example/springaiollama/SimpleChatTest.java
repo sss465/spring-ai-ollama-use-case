@@ -8,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * 简单对话测试
- * @author houbw
  * @date 2025/2/20
  */
 @Slf4j
