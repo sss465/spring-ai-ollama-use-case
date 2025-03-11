@@ -4,6 +4,7 @@ import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
+import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.milvus.MilvusVectorStore;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -45,5 +46,19 @@ class MilvusVectorStoreTest {
                         Map.of("title", "通义灵码上新Qwen2.5-Max模型，体验数学和编程双冠王能力"))
         );
         milvusVectorStore.add(docs);
+    }
+
+    @Test
+    void searchTest() {
+        List<Document> results = milvusVectorStore.similaritySearch(SearchRequest.builder().query("语义理解").topK(5).build());
+        log.info("search results: {}", results);
+    }
+
+    @Test
+    void searchWithCondition() {
+        List<Document> results = milvusVectorStore.similaritySearch(SearchRequest.builder().query("AI").topK(5)
+                .similarityThreshold(0.5)
+                .filterExpression("title == '通义灵码上新Qwen2.5-Max模型，体验数学和编程双冠王能力'").build());
+        log.info("condition search results: {}", results);
     }
 }
