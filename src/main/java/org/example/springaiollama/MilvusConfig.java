@@ -28,7 +28,7 @@ public class MilvusConfig {
     @Value("${spring.ai.vectorstore.milvus.embedding-field-name}")
     private String efn;
 
-    @Bean
+    @Bean("milvusVectorStore")
     public VectorStore milvusVectorStore(MilvusServiceClient milvusClient, EmbeddingModel embeddingModel) {
 
         log.info("Milvuls collection Name: {}", col);
