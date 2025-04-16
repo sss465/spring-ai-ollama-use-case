@@ -19,3 +19,4 @@
    6. 注意：每个embedding模型的维度不同，在定义维度时要根据模型指定，比如：nomic-embed-text的维度是768
 5. `RAG`：org.example.springaiollama.RAGTest
    1. 前提是有chat和embedding模型及向量数据库
+6. `文章仿写`：org.example.springaiollama.ArticleGenerateTest
